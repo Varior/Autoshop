@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Автозапчастини масла акумулятори шини</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="keywords" content="запчастини акумулятори шини колеса масла">
+		<meta name="description" content="Найкращі ціни і великий вибір запчастин акумуляторів та шин для всіх машин">
+		<meta name="author" content="Venzor">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	</head>
+	<body>
+        <div class="wrapper">
+  		<header class="header" style="cursor: pointer;" onclick="window.location.href='{% url "batteries" %}'">
+            <div class="container">
+            	{% static "images/logo.png" as logo %}
+            		<img class="logo" src="{{ logo }}" alt="Автозапчастини" />
+    			<h1>Акумулятори</h1>
+    		</div>
+    		<div class="phone">
+    			<img class="phone-logo" src="{% static 'images/kyivstar.png' %}">(097) 61 02 883 <img class="phone-logo" src="{% static 'images/lifecell.png' %}">(063) 36 99 372		
+    		</div>
+		</header>
+		<nav class="page-navigator">
+			<div class="container">
+				<ul>
+					<li><a href="{% url 'main' %}">Головна</a></li>
+					<li><a href="{% url 'batteries' %}">Акумулятори</a></li>
+					<li><a href="{% url 'about' %}">Про нас</a></li>
+					<li><a href="{% url 'contact' %}">Контакти</a></li>
+				</ul>	
+			</div>
+  		</nav>
+  		{% block body %}
+  		<main class="main">
+			<div class="container">
+				{% block content %}{% endblock %}			
+			</div>
+		</main>
+		{% endblock %}
+		<footer class="footer">
+			<div class="container">
+				<p> 2016 </p>
+			</div>
+		</footer>
+        </div>
+	</body>
+</html>

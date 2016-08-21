@@ -1,0 +1,21 @@
+<div class="header">Назва магазину header</div>
+
+<!-- 
+<div class="header">
+	<div class="menu"> Назва сайту
+		<ul> 
+			{% for category in categories %}
+            {% if selected_category == category %}<b>{% endif %}
+            <li><a href="{% url 'products' category.id %}">{{ category }}</a></li>
+            {% if selected_category == category %}</b>{% endif %}
+        	{% endfor %}
+			<li><a href="">Оплати та доставка</a></li>
+			<li><a href="{% url 'about' %}">About us</a></li>
+		</ul>
+	</div>
+	<div class="cart">
+		Cart: {% if order %}
+        	<a href="{% url 'cart' %}">{{ order.price }}$</a> 
+    	{% else %}empty{% endif %} 
+	</div>    
+</div> -->

@@ -1,0 +1,14 @@
+{% extends "batteries/base.html" %}
+{% block content %}
+	{% for battery in batteries %}
+		<a class="battery-item" href="#">
+			<div class="brand">{{battery.brand}} </div>
+			<span class="title">{{battery.voltage}}V </span>
+			<span class="title">{{battery.cold_cranking_amps}}A </span>
+			<span class="title">{{battery.cranking_amps}} Ah</span>
+			<span class="title">{{battery.length}} x {{battery.width}} x {{battery.height}} mm</span>
+			<div class="price">{{battery.price}}.грн</div>
+		</a>
+	{% endfor %}
+{% endblock %}
+			

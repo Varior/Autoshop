@@ -1,0 +1,32 @@
+{% extends "batteries/base.html" %}
+{% block content %}
+	{% regroup batteries by brand.name as battery_list %}
+	{% for brand in battery_list %}
+		<div class="brand-group">{{ brand.grouper }}</div>
+		<table class="table-bg">
+		<tbody>
+		<tr>
+			<th class="title-detail-batter">Ємність</th>
+			<th class="title-detail-batter">Сила пускового струму</th>
+			<th class="title-detail-batter">Полярність</th>
+			<th class="title-detail-batter">Габарити</th>
+			<th class="title-detail-batter">ціна</th>
+		</tr>
+			{% for batter in brand.list %}
+				<a class="battery-item" href="{% url 'battery' %}">
+					<tr class="list-detail-battery">
+						<td><span class="detail-battery">{{batter.cranking_amps}} Ah</span></td>
+						<td><span class="detail-battery">{{batter.cold_cranking_amps}}A </span></td>
+						<td>{% if batter.positive_terminal_side_right %} <span class="detail-battery">Правий плюс</span>
+							{% else %} <span class="detail-battery">Лівий плюс</span>
+						    {%endif%}</td>
+						<td><span class="detail-battery">{{batter.length}} x {{batter.width}} x {{batter.height}} mm</span></td>
+						<td><div class="battery-price">{{batter.price}}  грн</div></td>
+					</tr>
+				</a>				
+			{% endfor %}
+		</tbody>
+		</table>
+	{% endfor %}
+{% endblock %}
+			

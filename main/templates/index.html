@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}	
+	<div class="home">
+		<a href="{% url 'batteries' %}">
+			<div class="category-image">
+				<img class="image-batteries-1" src="{% static 'images/batteries.jpg' %}" alt="batteries">
+			</div>
+		</a>
+		<a href="">
+			<div class="category-image">
+				<img class="image-oils-1" src="{% static 'images/oils.jpg' %}" alt="oils">
+			</div>
+		</a>
+		<a href="">
+			<div class="category-image">
+				<img class="image-tyres-1" src="{% static 'images/types.jpg' %}" alt="tyres">
+			</div>
+		</a>
+		<a href="">
+			<div class="category-image">
+				<img class="image-parts-1" src="{% static 'images/parts.jpg' %}" alt="parts">
+			</div>
+		</a>
+	</div>
+{% endblock %}

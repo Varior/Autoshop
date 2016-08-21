@@ -1,0 +1,11 @@
+{% extends 'batteries/base.html' %}
+
+{% block title %}Shop{% endblock %}
+
+{% block body %}
+    {% for battery in batteries %}
+    <div>
+        <span class="title"> {{battery.voltage}} V {{battery.cold_cranking_amps}} A {{battery.cranking_amps}} Ah </span>
+    </div>       
+    {% endfor %}
+{% endblock %}

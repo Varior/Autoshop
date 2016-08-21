@@ -1,0 +1,181 @@
+body {
+	font-family: Arial;
+	font-size: 100%;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 98%;
+	max-width: 980px;	
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 100%;
+	line-height: 1.3em;
+}
+
+.header{
+	padding: 1% 0 7% 0;
+	background-color: yellowgreen;
+	
+}
+.header h1, .header h2 {
+	color: greenyellow;
+	text-align: center;
+}
+
+.logo{
+	width: 18%;
+	position: absolute;
+	padding-left: 5%;
+}
+
+.phone {
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: bold;
+
+}
+
+.phone-logo {
+	width: 20px;
+	padding: 5px 5px 0 5px;
+}
+
+.page-navigator {
+	background-color: #222;
+	border-color: #101010;
+	min-height: 64px;
+}
+
+.page-navigator li {
+	float: left;
+	width: 120px;
+}
+
+.page-navigator a {
+	display: block;
+	color: #9d9d9d;
+	line-height: 4em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.page-navigator li a:hover{
+	color: yellowgreen;
+	background-color: black;
+}
+
+.battery-item {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/*.brand{
+	width: 50px;
+	display: inline-block;
+} */
+
+.brand-group{
+	padding: 10px 50px;
+	background-color: aqua;
+}
+
+.table-bg{
+	width: 100%
+}
+
+.list-detail-battery{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.title{
+	padding-left: 5px;
+}
+
+.footer {
+	background-color: yellowgreen;
+	color: white;
+	padding: 20px 0;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.wrapper-battery {
+	padding: 3%;
+
+}
+
+.wrapper-image-battery {
+	display: block;
+	float: left;
+	padding-right: 7%;
+	
+}
+
+.wrapper-image-battery img {
+	max-width: 250px;
+
+}
+
+.table-battery {
+	width: 40%;
+	padding-left: 4%;
+	
+}
+.table-battery td {
+	padding-left: 4%;
+	margin: 10%;
+	
+}
+
+.home { 
+	margin: 2% auto;
+
+}
+.category-image {
+	display: inline-block;
+	width: 47%;
+	border: solid 2px;
+	border-radius: 23px;
+	-moz-border-radius: 23px;
+	-webkit-border-radius: 23px;
+	box-shadow: 0px 0px 14px #000000;
+	-moz-box-shadow: 0px 0px 14px #000000;
+	-webkit-box-shadow: 0px 0px 14px #000000;
+	margin: 1%;
+
+}
+.category-image:hover {
+	box-shadow: 0px 0px 14px #2dafd6;
+	-moz-box-shadow: 0px 0px 14px #2dafd6;
+	-webkit-box-shadow: 0px 0px 14px #2dafd6;
+	border-color: #2dafd6;
+}
+
+.image-batteries-1, .image-oils-1, .image-tyres-1, .image-parts-1 {
+	width: 50%;
+	margin: 5% 22%;
+	padding: 3%;
+
+}
+
+.battery-title {
+	font-weight: bold;
+	margin: 1% 0 2% 38%;
+}

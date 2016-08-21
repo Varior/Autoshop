@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+	<div class="wrapper-battery">
+		<div class="battery-title">
+			<h2>
+				{{battery.series.id}}
+				{{battery.brand}}
+				{{battery.series}}
+				{{battery.series.series_info}}
+			</h2>		
+		</div>		
+		<div class="wrapper-image-battery">
+			{% if battery.image %} 
+				<img class="image-battery" src="{{battery.image.url}}" alt="{{battery.battery_model}}">
+			{% else %}<img class="image-battery" src="{% static 'images/no_image_battery.jpg' %}" alt="{{battery.battery_model}}">
+			{%endif%}
+		</div>
+		<table class="table-battery">
+			<tr>
+				<td>Вольтаж</td>
+				<td>{{battery.voltage}} V</td>
+			</tr>
+			<tr>
+				<td>Ємність</td>
+				<td>{{battery.cranking_amps}} Ah</td>
+			</tr>
+			<tr>
+				<td>Сила пускового струму</td>
+				<td>{{battery.cold_cranking_amps}} A</td>
+			</tr>
+			<tr>
+				<td>Полярність</td>
+				<td>{% if battery.positive_terminal_side_right %} <span class="detail-battery">Правий плюс</span>
+					{% else %} <span class="detail-battery">Лівий плюс</span>
+					{%endif%}</td>
+			</tr>
+			<tr>
+				<td>Ширина</td>
+				<td>{{battery.width}} mm</td>
+			</tr>
+			<tr>
+				<td>Довжина</td>
+				<td>{{battery.length}} mm</td>
+			</tr>
+			<tr>
+				<td>Висота</td>
+				<td>{{battery.height}} mm</td>
+			</tr>
+			<tr>
+				<td>Вага</td>
+				<td>{{battery.weight}} Kg</td>
+			</tr>
+			<tr>
+				<td>Гарантія</td>
+				<td>{{battery.warranty}} міс.</td>
+			</tr>
+			<tr>
+				<td>Ціна</td>
+				<td>{{battery.earnings_price}} грн.</td>
+			</tr>
+		</table>
+		
+	</div>
+	
+{% endblock %}
+			
